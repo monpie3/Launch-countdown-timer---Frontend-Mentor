@@ -1,60 +1,126 @@
 :root {
-  --grayish-blue: hsl(237, 18%, 59%);
-  --soft-red: hsl(345, 95%, 68%);
-  --dark-desaturated-blue: hsl(236, 21%, 26%);
-  --very-dark-blue: hsl(235, 16%, 14%);
-  --very-dark: hsl(234, 17%, 12%);
+	--grayish-blue: hsl(237, 18%, 59%);
+	--soft-red: hsl(345, 95%, 68%);
+	--dark-desaturated-blue: hsl(236, 21%, 26%);
+	--very-dark-blue: hsl(235, 16%, 14%);
+	--very-dark: hsl(234, 17%, 12%);
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 14px;
-  font-family: "Red Hat Text", sans-serif;
-  font-weight: 700;
-  color: white;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family: "Red Hat Text", sans-serif;
+	color: white;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  background-color: var(--very-dark);
-  background-image: url("./images/bg-stars.svg");
-  height: 100%;
+	background-color: var(--very-dark-blue);
+    background-image: url("./images/bg-stars.svg");
+    background-size: contain;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+.wrapper { 
+    text-align: center;
 }
 
-main {
-  flex: 1;
+.counter {
+    display: inline-block;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.title {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    letter-spacing: 0.5em;
+}
+
+.title h1 {
+    text-transform: uppercase;
+}
+
+.counter__card {
+    /* background-color: var(--dark-desaturated-blue); */
+    /* background: linear-gradient(0, var(--dark-desaturated-blue) 50%, var(--grayish-blue) 50%); */
+	color: var(--soft-red);
+	border-radius: 5px;
+	box-shadow: 0 10px 0 2px var(--very-dark);
+	font-size: 8vh;
+	min-width: 10vw;
+    min-height: 20vh;
+    margin: 0 1vh 3vh 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.counter__card::after {
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--dark-desaturated-blue);
+    z-index: -1;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.counter__card::before {
+    content:' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--grayish-blue);
+    z-index: -1;
 }
 
 footer {
-  min-width: 100vw;
-  height: 20vh;
-  justify-items: center;
-  background-image: url("./images/pattern-hills.svg");
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+	height: 25vh;
+    background-image: url("./images/pattern-hills.svg");
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.media-contact img {
+    padding: 15px;
 }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
+    width: 100%;
+    position: absolute;
+    margin: auto 0;
+    bottom: 0;
+	font-size: 11px;
+    justify-content: center;
+    padding: 15px;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+	color: hsl(228, 45%, 44%);
 }
+
+/* @media all and (max-width:1440px) {
+}
+
+@media all and (max-width:375px) {
+} */
