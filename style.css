@@ -109,8 +109,8 @@ footer {
 }
 
 .media-contact a:hover {
-    color: var(--soft-red);
-    cursor: pointer;
+	color: var(--soft-red);
+	cursor: pointer;
 }
 
 .attribution {
