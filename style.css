@@ -103,7 +103,8 @@ footer {
 }
 
 .media-contact img {
-    padding: 15px;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .attribution {
@@ -119,6 +120,17 @@ footer {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
+
+.attribution a:hover {
+    color: var(--soft-red);
+}
+
+.media-contact img:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+
 
 /* @media all and (max-width:1440px) {
 }
