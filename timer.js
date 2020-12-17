@@ -27,7 +27,7 @@ function countdown() {
         document.getElementById("days").className = "counter__card";
 
         setTimeout("resetclassname()",800);
-        setTimeout("countdown()",1000);
+        setTimeout("countdown()",1000);    
     }
 
     else {
@@ -51,5 +51,4 @@ function resetclassname() {
     }
 
     document.getElementById("seconds").className = "counter__card";
-    
 }
