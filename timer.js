@@ -28,5 +28,4 @@ function countdown()
         else {
             document.getElementById("zegar").innerHTML = "Goodbye 2020, Hello 2021!"
         }
-         
 	}
