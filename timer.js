@@ -1,6 +1,6 @@
 var target_date = new Date("Jan 1, 2021 00:00:00").getTime();
 
-function countdown() {
+function countDown() {
     var today = new Date().getTime();
     var distance = target_date - today;
 		
@@ -26,8 +26,8 @@ function countdown() {
         document.getElementById("hours").className = "counter__card";
         document.getElementById("days").className = "counter__card";
 
-        setTimeout("resetclassname()",800);
-        setTimeout("countdown()",1000);    
+        setTimeout("flipCard()",800);
+        setTimeout("countDown()",1000);    
     }
 
     else {
@@ -35,7 +35,7 @@ function countdown() {
     }     
 }
     
-function resetclassname() {
+function flipCard() {
     if (seconds.innerHTML == "00") {
         console.log(seconds.innerHTML)
         console.log(minutes.innerHTML)
