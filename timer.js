@@ -14,14 +14,19 @@ function countDown() {
     if (minutes<10) minutes = "0"+minutes;
     if (seconds<10) seconds = "0"+seconds;
         
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    // document.getElementById("days").innerHTML = days;
+    // document.getElementById("hours").innerHTML = hours;
+    // document.getElementById("minutes").innerHTML = minutes;
+    // document.getElementById("seconds").innerHTML = seconds;
+
+    document.getElementById("seconds").setAttribute("data-content",seconds);
+    document.getElementById("minutes").setAttribute("data-content",minutes);
+    document.getElementById("hours").setAttribute("data-content",hours);
+    document.getElementById("days").setAttribute("data-content",days);
         
 
     if (distance > 0) {
-        document.getElementById("seconds").className = "counter__card counter__card--flipped";
+        document.getElementById("seconds").className = "counter__card counter__card--flipped split-color";
         document.getElementById("minutes").className = "counter__card";
         document.getElementById("hours").className = "counter__card";
         document.getElementById("days").className = "counter__card";
@@ -36,19 +41,18 @@ function countDown() {
 }
     
 function flipCard() {
-    if (seconds.innerHTML == "00") {
-        console.log(seconds.innerHTML)
-        console.log(minutes.innerHTML)
-        document.getElementById("minutes").className = "counter__card counter__card--flipped";
+    if (seconds.getAttribute("data-content") == "00") {
+        minutes.className = "counter__card counter__card--flipped";
     }
 
-    if (minutes.innerHTML == "00" && seconds.innerHTML == "00") {
-        document.getElementById("hours").className = "counter__card counter__card--flipped";
+    if (minutes.getAttribute("data-content") == "00" && seconds.getAttribute("data-content") == "00") {
+        hours.className = "counter__card counter__card--flipped";
     }
 
-    if (hours.innerHTML == "00" && minutes.innerHTML == "00" && seconds.innerHTML == "00") {
-        document.getElementById("days").className = "counter__card counter__card--flipped";
+    if (hours.getAttribute("data-content") == "00" && minutes.getAttribute("data-content") == "00" && seconds.getAttribute("data-content") == "00") {
+        days.className = "counter__card counter__card--flipped";
     }
 
-    document.getElementById("seconds").className = "counter__card";
+    seconds.className = "counter__card split-color";
 }
+
