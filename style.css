@@ -53,9 +53,8 @@ body {
 
 .title {
 	margin-top: 18vh;
-	margin-bottom: 10vh;
+	margin-bottom: 12vh;
 	letter-spacing: 0.5em;
-	font-size: 18px;
 	text-transform: uppercase;
 }
 
@@ -63,11 +62,11 @@ body {
 	/* background-color: var(--dark-desaturated-blue); */
 	/* background: linear-gradient(0, var(--dark-desaturated-blue) 50%, var(--grayish-blue) 50%); */
 	color: transparent;
-	border-radius: 5px;
-	box-shadow: 0 10px 0 2px var(--very-dark);
-	font-size: 8vh;
+	border-radius: 10px;
+	box-shadow: 0 9px 0 2px var(--very-dark);
+	font-size: 9vh;
 	min-width: 10vw;
-	min-height: 20vh;
+	min-height: 18vh;
 	margin: 0 1vh 3vh 1vh;
 	display: flex;
 	justify-content: center;
@@ -83,11 +82,11 @@ body {
 	height: 50%;
 	background-color: var(--missing-one);
 	z-index: -2;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 	color: var(--soft-red-darker);
 	overflow:hidden;
-	line-height: 250%;
+	line-height: 200%;
 }
 
 .counter__card::after {
@@ -97,6 +96,8 @@ body {
 	width: 100%;
 	height: 50%;
 	background-color: var(--dark-desaturated-blue);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 	z-index: -1;
 	color: var(--soft-red);
 	line-height: 0;
@@ -150,8 +151,27 @@ footer {
 	color: var(--soft-red);
 }
 
-/* @media all and (max-width:1440px) {
-}
+@media all and (max-width:1200px) {
+	.counter__card {
+		width: 20vw;
+	}
+} 
 
-@media all and (max-width:375px) {
-} */
+
+@media all and (max-width:615px) {
+	.title {
+		font-size: 12px;
+		padding: 5%;
+	}
+
+	.counter {
+		font-size: 7px;
+	}
+	
+	.counter__card {
+		min-height: 8vh;
+		font-size: 4vh;
+		width: 20vw;
+		box-shadow: 0 4px 0 2px var(--very-dark);
+	}
+} 
