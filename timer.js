@@ -1,23 +1,19 @@
-var target_date = new Date("Jan 1, 2021 00:00:00").getTime();
+const target_date = new Date(Date.now() + 12096e5).getTime();  //12096e5 represents 14 days in milliseconds.
+console.log(target_date)
 
 function countDown() {
-    var today = new Date().getTime();
-    var distance = target_date - today;
+    let today = new Date().getTime();
+    let distance = target_date - today;
 		
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if (days<10) days = "0"+days;
     if (hours<10) hours = "0"+hours;
     if (minutes<10) minutes = "0"+minutes;
     if (seconds<10) seconds = "0"+seconds;
-        
-    // document.getElementById("days").innerHTML = days;
-    // document.getElementById("hours").innerHTML = hours;
-    // document.getElementById("minutes").innerHTML = minutes;
-    // document.getElementById("seconds").innerHTML = seconds;
 
     document.getElementById("seconds").setAttribute("data-content",seconds);
     document.getElementById("minutes").setAttribute("data-content",minutes);
@@ -36,7 +32,7 @@ function countDown() {
     }
 
     else {
-        document.getElementsByClassName("wrapper")[0].innerHTML = "<h1>Goodbye 2020, Hello 2021!</h1>";
+        document.getElementsByClassName("wrapper")[0].innerHTML = "<h1>The countdown is over!</h1>";
     }     
 }
     

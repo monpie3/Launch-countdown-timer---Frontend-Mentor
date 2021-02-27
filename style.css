@@ -1,7 +1,7 @@
 :root {
 	--grayish-blue: hsl(237, 18%, 59%);
 	--soft-red: hsl(345, 95%, 68%);
-	--soft-red-darker:hsl(344, 61%, 57%);
+	--soft-red-darker: hsl(344, 61%, 57%);
 	--dark-desaturated-blue: hsl(236, 21%, 26%);
 	--very-dark-blue: hsl(235, 16%, 14%);
 	--very-dark: hsl(234, 17%, 12%);
@@ -51,16 +51,15 @@ body {
 	letter-spacing: 0.5em;
 }
 
+
 .title {
-	margin-top: 18vh;
-	margin-bottom: 12vh;
+	margin-top: 17vh;
+	margin-bottom: 13vh;
 	letter-spacing: 0.5em;
 	text-transform: uppercase;
 }
 
 .counter__card {
-	/* background-color: var(--dark-desaturated-blue); */
-	/* background: linear-gradient(0, var(--dark-desaturated-blue) 50%, var(--grayish-blue) 50%); */
 	color: transparent;
 	border-radius: 10px;
 	box-shadow: 0 9px 0 2px var(--very-dark);
@@ -72,6 +71,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	letter-spacing: normal;
 }
 
 .counter__card::before {
@@ -85,7 +85,7 @@ body {
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	color: var(--soft-red-darker);
-	overflow:hidden;
+	overflow: hidden;
 	line-height: 200%;
 }
 
@@ -151,14 +151,13 @@ footer {
 	color: var(--soft-red);
 }
 
-@media all and (max-width:1200px) {
+@media all and (max-width: 1200px) {
 	.counter__card {
 		width: 20vw;
 	}
-} 
+}
 
-
-@media all and (max-width:615px) {
+@media all and (max-width: 615px) {
 	.title {
 		font-size: 12px;
 		padding: 5%;
@@ -167,11 +166,11 @@ footer {
 	.counter {
 		font-size: 7px;
 	}
-	
+
 	.counter__card {
 		min-height: 8vh;
 		font-size: 4vh;
 		width: 20vw;
 		box-shadow: 0 4px 0 2px var(--very-dark);
 	}
-} 
+}
