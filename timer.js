@@ -1,5 +1,4 @@
-const target_date = new Date(Date.now() + 12096e5).getTime();  //12096e5 represents 14 days in milliseconds.
-console.log(target_date)
+var target_date = new Date("Jan 1, 2022 00:00:00").getTime();
 
 function countDown() {
     let today = new Date().getTime();
@@ -32,7 +31,7 @@ function countDown() {
     }
 
     else {
-        document.getElementsByClassName("wrapper")[0].innerHTML = "<h1>The countdown is over!</h1>";
+        document.getElementsByClassName("wrapper")[0].innerHTML = "<h1>Goodbye 2021, Hello 2022!</h1>";
     }     
 }
     
